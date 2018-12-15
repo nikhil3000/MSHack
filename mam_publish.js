@@ -19,6 +19,30 @@ const Mam = require('./lib/mam.client.js');
 const IOTA = require('iota.lib.js');
 const moment = require('moment');
 const iota = new IOTA({ provider: 'https://nodes.testnet.iota.org:443' });
+const mysql = require('mysql');
+var config =
+{
+    host: 'parina.mysql.database.azure.com',
+    user: 'parinaA@parina',
+    password: '@Abc123456789',
+    database: 'MSHack',
+    port: 3306,
+    ssl: true
+};
+
+const conn = new mysql.createConnection(config);
+
+conn.connect(
+    function (err) { 
+    if (err) { 
+        console.log("!!! Cannot connect !!! Error:");
+        throw err;
+    }
+    else
+    {
+       console.log("Connection established.");
+    }   
+});
 
 const MODE = 'restricted'; // public, private or restricted
 const SIDEKEY = 'mysecret'; // Enter only ASCII characters. Used only in restricted mode
@@ -44,6 +68,12 @@ const publish = async function(packet) {
 
     // Save new mamState
     mamState = message.state;
+    var updateRootQuery = `UPDATE main SET root="${message.root}" where id=1`;
+    conn.query(updateRootQuery, function (err, result) {
+        if (err) throw err;
+        console.log(result.affectedRows + " record(s) updated");
+      });
+      
     console.log('Root: ', message.root);
     console.log('Address: ', message.address);
 
