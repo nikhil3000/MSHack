@@ -106,4 +106,14 @@ const firstPublish = async function () {
 // Start it immediately
 
 firstPublish();
+executeDataPublishing();
+executeDataPublishing();
+
+executeDataPublishing();
+
+executeDataPublishing();
+
+executeDataPublishing();
+
+executeDataPublishing();
 setInterval(executeDataPublishing, TIMEINTERVAL * 1000);
