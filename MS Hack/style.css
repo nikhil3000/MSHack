@@ -1,0 +1,144 @@
+body, html {
+    height: 100%;
+    background-color: #F0F0F0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 50px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 10; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #0F81FB; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  color: #fff;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 8px;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+
+    background-color: #0C69CC;
+}
+
+.sub-div-2:hover{
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+transition: all 0.2s;
+}
+
+.sub-div-2{
+  transition: all 0.2s;
+}
+
+.public-icon:hover{
+  background-color: #42B4B4;
+  color: #fff !important; 
+  transition: all 0.2s;
+}
+.public-icon{
+  transition: all 0.2s;
+}
+/* Style page content */
+.main {
+    margin-left: 40px; /* Same as the width of the sidebar */
+    padding: 0; 
+
+}
+
+.div1{
+    height: 100%;
+    width: 20%; 
+    position: fixed; 
+    background-color: #FFF; 
+    overflow-x: hidden;
+    padding-top: 20px;
+    top: 0; /* Stay at the top */
+    -webkit-box-shadow: 4px 0px 8px 1px rgba(0,0,0,0.20);
+-moz-box-shadow: 4px 0px 8px 1px rgba(0,0,0,0.20);
+box-shadow: 4px 0px 8px 1px rgba(0,0,0,0.20);
+
+}
+img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.div2{
+    height: 100%;
+    width: 45%; 
+    position: fixed; 
+    overflow-x: hidden;
+    top: 0; /* Stay at the top */
+    left: 20%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sub-div-1{
+    //height: 40%;
+    //width: 98%;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+ 
+}
+#map {
+    position: fixed !important;
+    height: 100% ;
+}
+
+.shadow-less{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    padding: .4rem 0;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card-body {
+    padding: 1.25rem;
+    padding-bottom: 2rem;
+}
